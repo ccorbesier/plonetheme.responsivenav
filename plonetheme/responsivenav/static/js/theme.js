@@ -1,0 +1,5 @@
+
+function initializeplonethemeresponsivenav(){
+
+}
+jQuery(initializeplonethemeresponsivenav);

@@ -1,0 +1,33 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="plonetheme.responsivenav">
+
+  <include file="upgrades.zcml"/>
+
+  <include package="z3c.jbot" file="meta.zcml" />
+  <interface name="projectname.theme"
+      interface="plonetheme.responsivenav.interfaces.IThemeSpecific"
+      type="zope.publisher.interfaces.browser.IBrowserSkinType"
+      />
+  <browser:jbot directory="static/overrides" />
+
+  <include package="collective.js.bootstrap" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="plonetheme.responsivenav"
+      directory="profiles/default"
+      description='Extension profile for the "plonetheme.responsivenav" Plone theme.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <plone:static directory="static" type="theme" 
+    name="plonetheme.responsivenav" />
+
+</configure>

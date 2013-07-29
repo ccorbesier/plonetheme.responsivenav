@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="plonetheme.responsivenav">
+
+ <object name="plonetheme_responsivenav_custom"
+    meta_type="Filesystem Directory View"
+    directory="plonetheme.responsivenav:skins/plonetheme_responsivenav_custom"/>
+
+ <skin-path name="plonetheme.responsivenav" based-on="Sunburst Theme">
+  <layer name="plonetheme_responsivenav_custom"
+     insert-after="custom"/>
+ </skin-path>
+
+</object>
